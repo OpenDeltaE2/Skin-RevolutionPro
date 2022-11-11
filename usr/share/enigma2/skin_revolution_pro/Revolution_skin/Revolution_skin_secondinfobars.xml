@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin>
+	<!-- *********************************************************************            -->
+	<!--                        skin_revolution_pro by @dragon@                              -->
+	<!--                Based on (( MMark))  Xml files ozeta skin                         -->
+	<!--   any one can use my Moded screen and render     But keep my copy rights in it   -->
+	<!--   any one can use my Moded converter and render  But keep my copy rights in it   -->
+	<!-- *********************************************************************            -->
+	<!-- *********************************************************************            -->
+	<!-- *********************************************************************            -->
+	<!--                     Release  v.1.0  26/09/2022                                   -->
+	<!--                released for use on Open images                                   -->
+	<!--                  Currently Tested on Atv v6.X_7.X                                    -->
+	<!--                   Don't Remove this Disclaimer                                   -->
+	<!--                    Release  v.1.X  26/09/2022             	                      -->
+	<!-- *********************************************************************            -->
+	<copyright>
+		<abouth name="skin_revolution_pro"> 
+			author="@dragon@" 
+			license="Open" 
+			Support="All Open Images" 
+			Release="V 1.X" 
+			supporturl="" 
+		</abouth>
+	</copyright>
+	
+	<!-- SecondInfoBar -->
+<screen name="SecondInfoBar" title="Second Infobar" position="0,0" size="1920,1073" backgroundColor="#ff000000" flags="wfNoBorder">
+  <eLabel position="20,10" size="1880,165" backgroundColor="#40000000" zPosition="-2" />
+  <eLabel position="30,20" size="1860,145" backgroundColor="#20000000" zPosition="-1" />
+  <eLabel position="20,200" size="930,860" backgroundColor="#40000000" zPosition="-2" />
+  <eLabel position="30,210" size="910,840" backgroundColor="#20000000" zPosition="-1" />
+  <eLabel position="975,200" size="930,768" backgroundColor="#40000000" zPosition="-2" />
+  <eLabel position="986,210" size="910,754" backgroundColor="#20000000" zPosition="-1" />
+  <eLabel position="970,985" size="930,75" backgroundColor="#501b3c85" zPosition="-2" />
+  <eLabel position="980,995" size="910,55" backgroundColor="#201b3c85" zPosition="-1" />
+  <eLabel position="683,98" size="930,75" backgroundColor="#40000000" zPosition="-2" />
+  <eLabel position="697,108" size="910,55" backgroundColor="#20000000" zPosition="-1" />
+  <!-- PICON -->
+  <widget source="session.CurrentService" render="Picon" position="40,27" size="220,132" backgroundColor="#000000" alphatest="blend" transparent="1" zPosition="1">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <!-- Channel -->
+  <widget source="session.CurrentService" render="ChannelNumber" position="300,20" size="200,80" font="Carbon;70" foregroundColor="#ffffff" backgroundColor="#000000" transparent="1" zPosition="1" valign="center" halign="left" borderWidth="2" borderColor="#000000" />
+  <widget source="session.CurrentService" render="Label" position="300,85" size="400,90" font="Carbon;70" foregroundColor="yellow" backgroundColor="#000000" transparent="1" zPosition="1" valign="center" halign="left">
+    <convert type="ServiceName">Name</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="1465,67" size="410,60" foregroundColor="#606060" backgroundColor="#000000" transparent="1" zPosition="1" font="Regular;40" valign="center" halign="right">
+    <convert type="ClockToText">Format:%d.%m.%Y</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="1604,120" size="260,50" foregroundColor="#808080" backgroundColor="#000000" transparent="1" zPosition="1" font="Regular;42" valign="center" halign="right">
+    <convert type="ClockToText">Format:%-H:%M:%S</convert>
+  </widget>
+  <!-- Crypt icon (encrypted service?) -->
+  <!--<ePixmap pixmap="skin_revolution_pro/icons/lock-off.png" position="55,230" size="120,58" alphatest="blend" zPosition="4" scale="1" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="skin_revolution_pro/icons/lock-on.png" position="55,230" size="120,58" alphatest="blend" zPosition="5" scale="1">
+    <convert type="ServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>-->
+  <widget source="session.Event_Now" render="Label" position="720,233" size="200,40" font="Regular;36" halign="right" foregroundColor="green" backgroundColor="#101010" transparent="1" zPosition="1">
+    <convert type="EventName">SmallRating</convert>
+  </widget>
+  <!-- *** Selected Event *** -->
+  <ePixmap position="515,35" size="50,40" pixmap="skin_revolution_pro/dvr/cpu.png" alphatest="blend" scale="1" zPosition="2" transparent="1" />
+  <widget source="session.CurrentService" render="Label" position="580,35" size="293,44" font="Regular; 30" backgroundColor="black" halign="left" transparent="1" zPosition="7" foregroundColor="#FF8000">
+    <convert type="DraExtra1">CPULoad</convert>
+  </widget>
+  <ePixmap position="840,35" size="48,48" pixmap="skin_revolution_pro/dvr/cpu11.png" alphatest="blend" scale="1" zPosition="2" transparent="1" />
+  <widget source="session.CurrentService" position="905,35" size="278,35" font="Regular; 30" foregroundColor="#FF8000" backgroundColor="#00000000" transparent="1" zPosition="1" halign="left" render="Label" valign="top">
+    <convert type="DraExtra1">CPUSpeed</convert>
+  </widget>
+  <ePixmap position="1165,35" size="50,40" pixmap="skin_revolution_pro/dvr/ram.png" alphatest="blend" scale="1" zPosition="2" transparent="1" />
+  <widget source="session.CurrentService" render="Label" position="1214,34" size="300,44" font="Regular; 30" zPosition="6" backgroundColor="#00000000" transparent="1" foregroundColor="#FF8000" text="Cpu" noWrap="1" halign="center">
+    <convert type="DraReceiverInfo1">MemFree</convert>
+  </widget>
+  <ePixmap position="1520,30" size="48,48" pixmap="skin_revolution_pro/dvr/cpu2.png" alphatest="blend" scale="1" zPosition="2" transparent="1" />
+  <widget source="session.CurrentService" position="1569,38" size="293,35" font="Regular; 30" foregroundColor="#FF8000" backgroundColor="#00000000" transparent="1" zPosition="1" halign="left" render="Label" valign="top">
+    <convert type="DraExtra1">Temperature</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="697,108" size="240,40" font="Regular; 30" foregroundColor="#FFFFFF" halign="left" valign="center" backgroundColor="black" transparent="1" zPosition="21" noWrap="1" text="ip">
+  <convert type="DraExtra2">Iplocal</convert>
+</widget>
+  <widget source="session.Event_Now" render="Label" position="115,280" size="200,60" font="Regular;40" foregroundColor="#b0b0b0" backgroundColor="#000000" transparent="1" zPosition="1">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Format:%H:%M -</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="255,280" size="200,60" font="Regular;40" foregroundColor="red" backgroundColor="#000000" transparent="1" zPosition="1">
+    <convert type="EventTime">EndTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="60,340" size="860,44" font="Regular;32" halign="left" foregroundColor="#7FFF00" backgroundColor="#101010" transparent="1" zPosition="1" noWrap="1">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <eLabel position="60,390" size="860,3" backgroundColor="#202020" zPosition="1" />
+  <!-- Progressbar (current event duration) -->
+  <widget source="session.Event_Now" render="Progress" position="60,389" size="860,5" foregroundColor="#7FFF00" backgroundColor="#124582" transparent="1" zPosition="3">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="360,280" size="560,40" font="Birth;34" halign="left" foregroundColor="ltbluette" backgroundColor="#101010" transparent="1" zPosition="1">
+    <convert type="EventName">NowName</convert>
+  </widget>
+  <widget source="session.Event_Now" render="DraParental" position="847,300" size="82,82" alphatest="blend" zPosition="5" transparent="1" />
+  <widget source="session.Event_Now" render="DraExtraGenrePic" position="170,230" size="160,45" alphatest="blend" zPosition="10" transparent="1" noWrap="1" />
+  <widget source="session.Event_Now" render="xtraStarX" pixmap="skin_revolution_pro/menu/star.png" position="740,696" size="200,20" alphatest="blend" transparent="1" zPosition="3" />
+  <ePixmap pixmap="skin_revolution_pro/menu/star_b.png" position="740,696" size="200,20" alphatest="blend" zPosition="2" transparent="1" />
+  <ePixmap pixmap="skin_revolution_pro/menu/now_b.png" position="755,420" size="185,270" zPosition="2" alphatest="blend" />
+  <widget source="session.Event_Now" render="PosterX" delayPic="0" position="765,431" size="170,250" zPosition="5" alphatest="blend" transparent="1" />
+  <widget source="session.Event_Now" render="BackdropX" delayPic="0" position="55,685" zPosition="6" size="680,300" alphatest="blend" />
+  <widget source="session.Event_Now" render="XInfoEvents" position="55,685" size="680,300" font="Regular;26" halign="left" transparent="1" zPosition="2" backgroundColor="black" foregroundColor="#FFD700" valign="top" />
+  <widget source="session.Event_Now" render="Label" position="60,410" size="680,280" font="Regular;30" halign="left" foregroundColor="#7FFF00" backgroundColor="#101010" transparent="1" zPosition="1">
+    <convert type="EventName">FullDescription</convert>
+  </widget>
+  <widget source="session.Event_Next" render="DraParental" position="1795,300" size="82,82" alphatest="blend" zPosition="15" transparent="1" />
+  <widget source="session.Event_Next" render="DraExtraGenrePic" position="1050,230" size="160,45" alphatest="blend" zPosition="10" transparent="1" noWrap="1" />
+  <widget source="session.Event_Next" render="xtraStarX" pixmap="skin_revolution_pro/menu/star.png" position="1666,696" size="200,20" alphatest="blend" transparent="1" zPosition="3" />
+  <ePixmap pixmap="skin_revolution_pro/menu/star_b.png" position="1666,696" size="200,20" alphatest="blend" zPosition="2" transparent="1" />
+  <widget source="session.Event_Next" render="PosterX" delayPic="0" position="1687,431" nexts="1" size="170,250" zPosition="6" alphatest="blend" transparent="1" />
+  <ePixmap pixmap="skin_revolution_pro/menu/next_b.png" position="1679,420" size="185,270" zPosition="2" alphatest="blend" />
+  <widget source="session.Event_Next" render="BackdropX" delayPic="0" position="985,657" nexts="1" zPosition="6" size="680,300" alphatest="blend" />
+  <widget source="session.Event_Next" render="XInfoEvents" position="985,657" size="680,300" font="Regular;26" halign="left" transparent="1" zPosition="2" backgroundColor="black" foregroundColor="#FFD700" valign="top" />
+  <widget source="session.Event_Next" render="Label" position="1010,280" size="115,40" font="Regular;36" halign="left" foregroundColor="#b0b0b0" backgroundColor="#000000" transparent="1" zPosition="1">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Format:%H:%M -</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="1135,280" size="155,40" font="Regular;36" halign="left" foregroundColor="red" backgroundColor="#000000" transparent="1" zPosition="1">
+    <convert type="EventTime">Duration</convert>
+    <convert type="ClockToText">InMinutes</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="1300,280" size="510,40" font="Birth;34" halign="left" foregroundColor="ltbluette" backgroundColor="#101010" transparent="1" zPosition="1">
+    <convert type="EventName">NextName</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="1460,233" size="400,50" font="Regular;36" halign="right" foregroundColor="green" backgroundColor="#101010" transparent="1" zPosition="1">
+    <convert type="EventName">SmallRating</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="1010,340" size="850,40" font="Regular;32" halign="left" noWrap="1" foregroundColor="#124582" backgroundColor="#101010" transparent="1" zPosition="1">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <eLabel position="1020,390" size="840,3" backgroundColor="#202020" zPosition="1" />
+  <widget source="session.Event_Next" render="Label" position="989,412" size="680,269" font="Regular;30" halign="block" foregroundColor="#124582" backgroundColor="#101010" transparent="1" zPosition="1">
+    <convert type="EventName">FullDescription</convert>
+  </widget>
+  <!-- TeleText icon -->
+  <ePixmap pixmap="skin_revolution_pro/icons/teletext_bk.png" position="50,1005" size="160,32" zPosition="1" alphatest="blend" />
+  <ePixmap pixmap="skin_revolution_pro/icons/teletext_off.png" position="50,1005" size="160,32" zPosition="1" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="skin_revolution_pro/icons/teletext_on.png" position="50,1005" size="160,32" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="skin_revolution_pro/buttons/button_green.png" position="218,1005" size="30,30" alphatest="blend" zPosition="2" />
+  <eLabel text="Plugins" position="254,1005" size="100,30" font="Regular;24" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" zPosition="1" />
+  <ePixmap pixmap="skin_revolution_pro/buttons/button_yellow.png" position="410,1005" size="30,30" alphatest="blend" zPosition="2" />
+  <eLabel text="Audio" position="444,1005" size="100,30" font="Regular;24" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" zPosition="1" />
+  <ePixmap pixmap="skin_revolution_pro/buttons/button_blue.png" position="580,1005" size="30,30" alphatest="blend" zPosition="2" />
+  <eLabel text="Extensions" position="614,1005" size="150,30" font="Regular;24" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" zPosition="1" />
+  <ePixmap pixmap="skin_revolution_pro/buttons/button_red.png" position="770,1005" size="30,30" alphatest="blend" zPosition="2" />
+  <eLabel text="Info" position="804,1005" size="150,30" font="Regular;24" foregroundColor="#FFFFFF" backgroundColor="#000000" transparent="1" zPosition="1" />
+  <!-- Audio icon (is there multichannel audio?) -->
+  <ePixmap pixmap="icons/ico_dolby_off.png" position="990,1010" size="130,30" zPosition="3" alphatest="blend" scale="1" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_dolby_on.png" position="990,1010" size="130,30" zPosition="4" alphatest="blend" scale="1">
+    <convert type="ServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <!-- HbbTV icon -->
+  <ePixmap pixmap="skin_revolution_pro/icons/ico_hbbtv_off.png" position="1360,1005" size="107,37" alphatest="blend" zPosition="1" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="skin_revolution_pro/icons/ico_hbbtv_on.png" position="1360,1005" size="107,37" alphatest="blend" zPosition="2">
+    <convert type="ServiceInfo">HasHBBTV</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <!-- Panel Video Resolution -->
+  <ePixmap pixmap="skin_revolution_pro/icons/res1.png" position="1500,1010" size="120,30" alphatest="blend" zPosition="2" />
+  <widget render="VideoSize" source="session.CurrentService" font="Regular;20" position="1500,1013" size="120,25" backgroundColor="#000000" foregroundColor="#ffff00" halign="center" transparent="1" zPosition="1" />
+  <!-- HD icon -->
+  <widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_format_sd.png" position="1650,1010" size="60,35" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsSD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_format_hd.png" position="1650,1010" size="60,35" zPosition="4" alphatest="blend">
+    <convert type="ServiceInfo">IsHD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_format_4k.png" position="1650,1010" size="60,35" zPosition="6" alphatest="blend">
+    <convert type="ServiceInfo">Is4K</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget asource="session.CurrentService" render="Pixmap" pixmap="icons/ico_format_4khh.png" position="1650,1010" size="60,35" zPosition="7" alphatest="blend">
+    <convert type="ServiceInfo">IsHDHDR</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_format_4kh.png" position="1650,1010" size="60,35" zPosition="8" alphatest="blend">
+    <convert type="ServiceInfo">IsHDR</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_format_4kh.png" position="1650,1010" size="60,35" zPosition="9" alphatest="blend">
+    <convert type="ServiceInfo">IsHDR10</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="icons/ico_format_off.png" position="1730,1010" size="60,35" alphatest="blend" zPosition="1" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_format_16_9.png" position="1730,1010" size="60,35" alphatest="blend" zPosition="2">
+    <convert type="ServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="icons/ico_stream_off.png" position="1810,1005" size="66,37" alphatest="blend" zPosition="1" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_stream_on.png" position="1810,1005" size="66,37" zPosition="3" alphatest="blend">
+    <convert type="ClientsStreaming" />
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <!-- Service -->
+  <widget source="session.CurrentService" render="Label" position="944,108" size="660,45" font="Regular;26" foregroundColor="#ffffff" backgroundColor="#30000000" borderWidth="1" borderColor="#000000" transparent="1" zPosition="1" valign="center" halign="right">
+    <convert type="CryptoInfo">VerboseInfo</convert>
+  </widget>
+  <widget source="session.CurrentService" render="FixedLabel" position="750,900" size="150,45" text="BetaCrypt" font="Regular;26" backgroundColor="#17000000" foregroundColor="green" transparent="0" zPosition="4">
+    <convert type="DraHDChannelCryptoInfo">BetaCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <eLabel text="FreeToAir" position="750,900" size="160,45" valign="center" font="Regular;26" backgroundColor="#20000000" foregroundColor="#808080" transparent="1" zPosition="3" />
+  <widget source="session.CurrentService" render="FixedLabel" position="750,900" size="160,45" valign="center" text="Viacces" font="Regular;26" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+    <convert type="DraHDChannelCryptoInfo">ViaCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="FixedLabel" position="750,900" size="160,45" valign="center" text="Irdeto" font="Regular;26" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+    <convert type="DraHDChannelCryptoInfo">IrdCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="FixedLabel" position="750,900" size="160,45" valign="center" text="Seca" font="Regular;26" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+    <convert type="DraHDChannelCryptoInfo">SecaCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="FixedLabel" position="750,900" size="160,45" valign="center" text="NagraVision" font="Regular;26" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+    <convert type="DraHDChannelCryptoInfo">NagraCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="FixedLabel" position="750,900" size="160,45" valign="center" text="CryptoWork" font="Regular;26" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+    <convert type="DraHDChannelCryptoInfo">CrwCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="FixedLabel" position="750,900" size="160,45" valign="center" text="NDS-VG" font="Regular;24" backgroundColor="#20000000" foregroundColor="yellow" transparent="0" zPosition="4">
+    <convert type="DraHDChannelCryptoInfo">NdsCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="FixedLabel" position="750,900" size="160,45" valign="center" text="Conax" font="Regular;26" backgroundColor="#20000000" foregroundColor="green" transparent="0" zPosition="4">
+    <convert type="DraHDChannelCryptoInfo">ConaxCrypt</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+</screen>
+  	</skin>

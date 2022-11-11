@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skin>
+	<!-- *********************************************************************            -->
+	<!--                        skin_revolution_pro by @dragon@                              -->
+	<!--                Based on (( MMark))  Xml files ozeta skin                         -->
+	<!--   any one can use my Moded screen and render     But keep my copy rights in it   -->
+	<!--   any one can use my Moded converter and render  But keep my copy rights in it   -->
+	<!-- *********************************************************************            -->
+	<!-- *********************************************************************            -->
+	<!-- *********************************************************************            -->
+	<!--                     Release  v.1.0  26/09/2022                                   -->
+	<!--                released for use on Open images                                   -->
+	<!--                  Currently Tested on Atv v6.X_7.X                                    -->
+	<!--                   Don't Remove this Disclaimer                                   -->
+	<!--                    Release  v.1.X  26/09/2022             	                      -->
+	<!-- *********************************************************************            -->
+	<copyright>
+		<abouth name="skin_revolution_pro"> 
+			author="@dragon@" 
+			license="Open" 
+			Support="All Open Images" 
+			Release="V 1.X" 
+			supporturl="" 
+		</abouth>
+	</copyright>
+
+<!-- InfoBar -->
+	<screen name="InfoBar" flags="wfNoBorder" position="0,0" size="1920,1080" title="InfoBar" backgroundColor="transparent">
+  <ePixmap pixmap="skin_revolution_pro/picmenu/infobar5.png" position="0,675" size="1931,400" alphatest="blend" />
+  <ePixmap position="0,0" size="1920,138" pixmap="skin_revolution_pro/picmenu/infobar-top-small.png" alphatest="blend" zPosition="-1" />
+  <eLabel position="0,0" size="1920,143" backgroundColor="#54111112" transparent="0" zPosition="-2" />
+  <!--<eLabel backgroundColor="background40" position="1,815" size="1920,43" transparent="0" zPosition="-20" foregroundColor="white" />-->
+  <widget source="session.CurrentService" render="Label" position="10,800" size="650,60" font="Carbon; 60" halign="left" backgroundColor="background" transparent="1" zPosition="3" foregroundColor="yellow" borderWidth="0" borderColor="orange">
+    <convert type="ServiceName">Name</convert>
+  </widget>
+  <ePixmap pixmap="skin_revolution_pro/menu/now.png" position="1440,895" size="100,150" zPosition="9" alphatest="blend" />
+  <ePixmap pixmap="skin_revolution_pro/menu/next.png" position="1556,895" size="100,150" zPosition="9" alphatest="blend" />
+  <ePixmap pixmap="skin_revolution_pro/menu/next.png" position="1675,895" size="100,150" zPosition="9" alphatest="blend" />
+  <ePixmap pixmap="skin_revolution_pro/menu/next.png" position="1790,895" size="100,150" zPosition="9" alphatest="blend" />
+  <widget source="session.Event_Now" render="PosterX" nexts="0" usedImage="poster" delayPic="0" position="1440,895" size="100,150" zPosition="10" borderWidth="1" borderColor="blue" />
+  <widget source="session.Event_Next" render="PosterX" nexts="1" usedImage="poster" delayPic="0" position="1557,895" size="100,150" zPosition="10" borderWidth="1" borderColor="white" />
+  <widget source="session.Event_Next" render="PosterX" nexts="2" usedImage="poster" delayPic="0" position="1675,895" size="100,150" zPosition="10" borderWidth="1" borderColor="white" />
+  <widget source="session.Event_Next" render="PosterX" nexts="3" usedImage="poster" delayPic="0" position="1790,895" size="100,150" zPosition="10" borderWidth="1" borderColor="white" />
+  <widget source="session.Event_Now" render="Label" position="5,881" size="100,50" font="Regular; 25" backgroundColor="black" transparent="1" foregroundColor="#7FFF00" zPosition="3" halign="center" valign="bottom">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="108,866" size="550,60" font="Regular; 25" backgroundColor="black" transparent="1" foregroundColor="#7FFF00" zPosition="3" halign="center" valign="bottom">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="session.Event_Now" render="Label" position="644,871" size="120,60" font="Regular; 25" backgroundColor="black" halign="center" transparent="1" foregroundColor="#7FFF00" zPosition="3" valign="bottom">
+    <convert type="EventTime">Remaining</convert>
+    <convert type="RemainingToText">InMinutes</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="5,941" size="100,50" font="Regular; 25" backgroundColor="black" transparent="1" zPosition="2" halign="center" valign="top" foregroundColor="#124582">
+    <convert type="EventTime">StartTime</convert>
+    <convert type="ClockToText">Default</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="101,941" size="550,55" font="Regular; 25" backgroundColor="black" transparent="1" zPosition="2" halign="center" valign="top" foregroundColor="#124582">
+    <convert type="EventName">Name</convert>
+  </widget>
+  <widget source="session.Event_Next" render="Label" position="653,941" size="100,50" font="Regular; 25" backgroundColor="background" halign="center" transparent="1" zPosition="3" valign="top" foregroundColor="#124582">
+    <convert type="EventTime">Duration</convert>
+    <convert type="ClockToText">InMinutes</convert>
+  </widget>
+  <ePixmap pixmap="skin_revolution_pro/picmenu/sl1000.png" position="100,930" size="555,7" zPosition="2" alphatest="blend" />
+  <widget source="session.Event_Now" render="Progress" foregroundColor="#7FFF00" backgroundColor="#124582" position="100,930" size="555,7" zPosition="3" transparent="1">
+    <convert type="EventTime">Progress</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="710,992" size="120,30" font="Regular; 28" halign="right" backgroundColor="background" transparent="1" zPosition="1">
+    <convert type="PliExtraInfo">TunerSystem</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="skin_revolution_pro/icons/iptv.png" alphatest="blend" position="1543,827" size="50,50" zPosition="2" transparent="1">
+    <convert type="ServiceInfo">IsStream</convert>
+    <convert type="ConditionalShowHide">
+    </convert>
+  </widget>
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="skin_revolution_pro/icons/sat.png" position="1543,827" size="50,50" zPosition="2" alphatest="blend">
+    <convert type="FrontendInfo">TYPE</convert>
+    <convert type="ValueRange">0,0</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="skin_revolution_pro/icons/dvbt.png" position="1543,827" size="50,50" zPosition="2" alphatest="blend">
+    <convert type="FrontendInfo">TYPE</convert>
+    <convert type="ValueRange">2,2</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.FrontendInfo" render="Pixmap" pixmap="skin_revolution_pro/icons/kabel.png" position="1543,827" size="50,50" zPosition="2" alphatest="blend">
+    <convert type="FrontendInfo">TYPE</convert>
+    <convert type="ValueRange">1,1</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap position="1426,830" size="50,36" zPosition="6" pixmap="skin_revolution_pro/dragon/wifi2.png" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="skin_revolution_pro/icons/wifi_on.png" position="1426,830" zPosition="7" size="50,36" transparent="1" alphatest="blend">
+    <convert type="RouteInfo">Wifi</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <!--<widget source="session.CurrentService" render="Label" position="1431,835" zPosition="7" size="50,20" valign="center" halign="center" font="Regular;25" transparent="1" backgroundColor="background">
+    <convert type="RouteInfo">Info</convert>
+  </widget>-->
+  <!--<ePixmap position="1428,811" size="40,40" zPosition="6" pixmap="skin_revolution_pro/icons/wifi-off.png" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="skin_revolution_pro/icons/wifi_on.png" position="1428,811" zPosition="7" size="40,40" transparent="1" alphatest="blend">
+  <convert type="RouteInfo">Wifi</convert>
+  <convert type="ConditionalShowHide" />
+ </widget>-->
+ <widget source="session.CurrentService" render="Label" position="1185,765" size="660,45" font="Regular;26" foregroundColor="#ffffff" backgroundColor="#30000000" borderWidth="1" borderColor="#000000" transparent="1" zPosition="2" valign="center" halign="left">
+    <convert type="CryptoInfo">VerboseInfo</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="772,947" size="320,35" font="Regular; 30" halign="left" backgroundColor="background" transparent="1" zPosition="2" foregroundColor="bluette">
+    <convert type="ServiceName">Provider</convert>
+  </widget>
+  <widget alphatest="blend" position="782,764" size="390,177" render="Picon" source="session.CurrentService" transparent="1" zPosition="1" borderWidth="1" borderColor="verygrey">
+    <convert type="ServiceName">Reference</convert>
+  </widget>
+  <ePixmap alphatest="blend" pixmap="skin_revolution_pro/icons/ico_rec_off.png" position="1600,863" size="80,26" zPosition="5" />
+  <widget alphatest="blend" pixmap="skin_revolution_pro/icons/ico_rec_on.png" position="1599,863" render="Pixmap" size="80,26" source="session.RecordState" zPosition="2">
+    <convert type="ConditionalShowHide">Blink</convert>
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="skin_revolution_pro/icons/ico_dolby_off.png" position="1829,828" size="50,30" zPosition="1" alphatest="blend">
+    <convert type="ServiceInfo">IsStereo</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="skin_revolution_pro/icons/ico_dolby_on.png" position="1829,828" size="50,30" zPosition="1" alphatest="blend">
+    <convert type="ServiceInfo">IsMultichannel</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="skin_revolution_pro/icons/ico_format_off.png" position="1479,828" size="50,30" zPosition="1" alphatest="blend">
+    <convert type="ServiceInfo">IsNotWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="skin_revolution_pro/icons/ico_format_on.png" position="1479,828" size="50,30" zPosition="1" alphatest="blend">
+    <convert type="ServiceInfo">IsWidescreen</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="skin_revolution_pro/icons/ico_txt_on.png" position="1665,828" size="50,30" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">HasTelext</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="skin_revolution_pro/icons/ico_iptv_on.png" alphatest="blend" position="1665,828" zPosition="3" size="50,30" transparent="1">
+    <convert type="ServiceInfo">IsStream</convert>
+    <convert type="ConditionalShowHide">
+    </convert>
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="skin_revolution_pro/icons/ico_hbbtv_on.png" position="1721,828" size="105,37" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">HasHBBTV</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <ePixmap pixmap="skin_revolution_pro/icons/ico_crypt_off.png" position="1110,944" size="50,35" zPosition="1" alphatest="blend" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="skin_revolution_pro/icons/ico_crypt_on.png" position="1110,944" size="50,35" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsCrypted</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Label" position="1205,981" size="80,35" font="Regular; 27" halign="right" valign="center" transparent="1" backgroundColor="background" foregroundColor="bluette" zPosition="5">
+    <convert type="ServiceInfo">VideoWidth</convert>
+  </widget>
+  <eLabel text="x" position="1283,981" size="20,35" font="Regular; 27" halign="center" valign="center" transparent="1" backgroundColor="background" foregroundColor="bluette" zPosition="5" />
+  <widget source="session.CurrentService" render="Label" position="1305,981" size="80,35" font="Regular; 27" halign="left" valign="center" transparent="1" backgroundColor="background" foregroundColor="bluette" zPosition="5">
+    <convert type="ServiceInfo">VideoHeight</convert>
+  </widget>
+  <panel name="template_right_tuner_info" />
+  <!--<eLabel backgroundColor="darkblue" position="-1,896" size="1920,180" transparent="0" zPosition="-20" foregroundColor="white" />
+  <eLabel backgroundColor="darkblue" position="-1,861" size="1920,30" transparent="0" zPosition="-20" foregroundColor="white" />-->
+  <widget source="session.CurrentService" render="Label" position="741,1026" zPosition="1" valign="center" size="700,30" font="Regular; 28" backgroundColor="black" transparent="1" halign="left">
+    <convert type="DraServiceName">TpansponderInfo</convert>
+  </widget>
+  <ePixmap position="1135,970" size="70,70" pixmap="skin_revolution_pro/icons/vpn.png" alphatest="blend" scale="1" zPosition="8" />
+  <widget source="session.CurrentService" render="Pixmap" pixmap="skin_revolution_pro/icons/vpn_on.png" position="1135,970" zPosition="9" size="70,70" transparent="1" alphatest="blend">
+    <convert type="DraSatVpn ">vpn</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <!--<widget source="session.CurrentService" position="328,1022" size="383,35" render="Label" font="Regular; 28" halign="center" valign="center" backgroundColor="black" transparent="1" foregroundColor="bluette" zPosition="5">
+    <convert type="EGExtraInfo">CamName</convert>
+  </widget>-->
+  <widget alphatest="blend" render="MSNWeatherPixmap" position="315,16" size="100,100" source="session.MSNWeather" transparent="1" zPosition="8">
+    <convert type="MSNWeather">weathericon,current,/usr/share/enigma2/skin_revolution_pro/WeatherIcon/,png</convert>
+  </widget>
+  <widget noWrap="1" backgroundColor="background" font="Regular; 33" render="Label" typeSpeed="1500" typeCaret="_" position="418,14" size="450,39" source="session.MSNWeather" zPosition="3" halign="left" transparent="1">
+    <convert type="MSNWeather">city</convert>
+  </widget>
+  <widget noWrap="1" backgroundColor="background" font="Regular; 33" render="Label" typeSpeed="1500" typeCaret="_" position="419,53" size="450,40" source="session.MSNWeather" zPosition="3" halign="left" transparent="1">
+    <convert type="MSNWeather">temperature_text,current</convert>
+  </widget>
+  <!-- ***** Temperature day-2 ***** -->
+  <widget render="MSNWeatherPixmap" source="session.MSNWeather" position="839,16" size="80,80" zPosition="12" alphatest="blend">
+    <convert type="MSNWeather">weathericon,day2,/usr/share/enigma2/skin_revolution_pro/WeatherIcon/,png</convert>
+  </widget>
+  <widget source="session.MSNWeather" render="Label" position="919,16" size="150,40" font="Regular; 25" halign="left" backgroundColor="background" transparent="1" zPosition="12">
+    <convert type="MSNWeather">weekday,day2</convert>
+  </widget>
+  <widget source="session.MSNWeather" render="Label" position="919,60" size="150,40" font="Regular; 25" halign="left" backgroundColor="background" transparent="1" zPosition="12">
+    <convert type="MSNWeather">temperature_heigh_low,day2</convert>
+  </widget>
+  <!-- ***** Temperature day-3 ***** -->
+  <widget render="MSNWeatherPixmap" source="session.MSNWeather" position="1069,16" size="80,80" zPosition="12" alphatest="blend">
+    <convert type="MSNWeather">weathericon,day3,/usr/share/enigma2/skin_revolution_pro/WeatherIcon/,png</convert>
+  </widget>
+  <widget source="session.MSNWeather" render="Label" position="1149,16" size="150,40" font="Regular; 25" halign="left" backgroundColor="background" transparent="1" zPosition="12">
+    <convert type="MSNWeather">weekday,day3</convert>
+  </widget>
+  <widget source="session.MSNWeather" render="Label" position="1147,60" size="150,40" font="Regular; 25" halign="left" backgroundColor="background" transparent="1" zPosition="12">
+    <convert type="MSNWeather">temperature_heigh_low,day3</convert>
+  </widget>
+  <!-- ***** Temperature day-4 ***** -->
+  <widget render="MSNWeatherPixmap" source="session.MSNWeather" position="1299,16" size="80,80" zPosition="12" alphatest="blend">
+    <convert type="MSNWeather">weathericon,day4,/usr/share/enigma2/skin_revolution_pro/WeatherIcon/,png</convert>
+  </widget>
+  <widget source="session.MSNWeather" render="Label" position="1380,16" size="150,40" font="Regular; 25" halign="left" backgroundColor="background" transparent="1" zPosition="12">
+    <convert type="MSNWeather">weekday,day4</convert>
+  </widget>
+  <widget source="session.MSNWeather" render="Label" position="1384,60" size="150,40" font="Regular; 25" halign="left" backgroundColor="background" transparent="1" zPosition="12">
+    <convert type="MSNWeather">temperature_heigh_low,day4</convert>
+  </widget>
+  <!-- ***** Temperature day-5 ***** -->
+  <widget render="MSNWeatherPixmap" source="session.MSNWeather" position="1532,16" size="80,80" zPosition="12" alphatest="blend">
+    <convert type="MSNWeather">weathericon,day5,/usr/share/enigma2/skin_revolution_pro/WeatherIcon/,png</convert>
+  </widget>
+  <widget source="session.MSNWeather" render="Label" position="1609,16" size="150,40" font="Regular; 25" halign="left" backgroundColor="background" transparent="1" zPosition="12">
+    <convert type="MSNWeather">weekday,day5</convert>
+  </widget>
+  <widget source="session.MSNWeather" render="Label" position="1610,60" size="150,40" font="Regular; 25" halign="left" backgroundColor="background" transparent="1" zPosition="12">
+    <convert type="MSNWeather">temperature_heigh_low,day5</convert>
+  </widget>
+  <widget noWrap="1" backgroundColor="black" font="Regular; 45" render="Label" borderWidth="2" position="700,15" size="128,65" source="session.MSNWeather" transparent="1" zPosition="10" halign="center" text="45 `C" valign="top">
+    <convert type="MSNWeather">temperature_current</convert>
+  </widget>
+  <widget source="session.CurrentService" position="358,1022" size="383,35" render="Label" font="Regular; 28" halign="center" valign="center" backgroundColor="black" transparent="1" foregroundColor="bluette" zPosition="5">
+    <convert type="DraAccess">CamName</convert>
+  </widget>
+  <eLabel text="SNR:" position="15,997" size="65,30" font="Regular; 28" backgroundColor="#000000" foregroundColor="#9932CC" halign="left" valign="center" transparent="1" zPosition="5" />
+  <widget source="session.FrontendStatus" render="Label" position="275,1005" size="80,30" font="Regular; 28" valign="center" noWrap="1" transparent="1" halign="left" backgroundColor="black" zPosition="5">
+    <convert type="FrontendInfo">SNR</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Progress" position="77,1005" size="200,25" pixmap="skin_default/icons/bar_snr.png" halign="left" backgroundColor="#000000" zPosition="5" transparent="1">
+    <convert type="FrontendInfo">SNR</convert>
+  </widget>
+  <eLabel text="AGC:" position="15,1029" size="65,30" font="Regular;28" backgroundColor="#000000" foregroundColor="#9932CC" transparent="1" zPosition="5" />
+  <widget source="session.FrontendStatus" render="Progress" pixmap="skin_default/icons/agc.png" position="76,1032" size="200,25" backgroundColor="#000000" zPosition="3" transparent="1">
+    <convert type="FrontendInfo">AGC</convert>
+  </widget>
+  <widget source="session.FrontendStatus" render="Label" position="275,1033" size="80,30" font="Regular;28" halign="left" backgroundColor="#000000" transparent="1" zPosition="3">
+    <convert type="FrontendInfo">AGC</convert>
+  </widget>
+  <!--<eLabel backgroundColor="foreground" position="372,1030" size="1522,1" transparent="0" zPosition="-20" foregroundColor="white" />-->
+  <widget source="global.CurrentTime" render="Label" position="1210,809" size="120,40" font="Regular; 40" halign="right" foregroundColor="#FFFFFF" backgroundColor="black" transparent="1" valign="center" zPosition="5">
+    <convert type="ClockToText">Format:%H:%M</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="1345,809" size="60,40" font="Regular; 40" halign="left" foregroundColor="#FFFFFF" backgroundColor="black" transparent="1" valign="top" zPosition="5">
+    <convert type="ClockToText">Format:%S</convert>
+  </widget>
+  <widget source="global.CurrentTime" render="Label" position="1175,857" size="250,30" font="Regular; 25" backgroundColor="black" transparent="1" halign="right" zPosition="5">
+    <convert type="ClockToText">Format:%A %d.%m.%Y</convert>
+  </widget>
+  <eLabel text=":" position="1333,809" size="10,40" font="Regular; 40" halign="center" valign="center" transparent="1" backgroundColor="background" zPosition="5" />
+  <widget source="session.CurrentService" render="Label" font="Regular; 25" position="1173,942" size="260,35" halign="left" zPosition="5" backgroundColor="background" transparent="1" noWrap="1" foregroundColor="bluette" valign="center">
+    <convert type="DraCaidInfo">CryptInfo2</convert>
+  </widget>
+  <!--<eLabel backgroundColor="darkgrey" position="382,962" size="1490,1" transparent="0" zPosition="-20" foregroundColor="white" />-->
+  <widget source="session.CurrentService" render="Pixmap" pixmap="skin_revolution_pro/icons/ico_format_4khh.png" position="1600,828" size="50,30" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsHDHDR</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="skin_revolution_pro/icons/ico_format_4kh.png" position="1600,828" size="50,30" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsHLG</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="skin_revolution_pro/icons/ico_format_4kh.png" position="1600,828" size="50,30" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsHDR</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="skin_revolution_pro/icons/ico_format_4kh.png" position="1600,828" size="50,30" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsHDR10</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="skin_revolution_pro/icons/ico_format_4k.png" position="1600,828" size="50,30" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">Is4K</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="skin_revolution_pro/icons/ico_format_hd.png" position="1600,828" size="50,30" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsHD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="skin_revolution_pro/icons/ico_format_sd.png" position="1600,828" size="50,30" zPosition="2" alphatest="blend">
+    <convert type="ServiceInfo">IsSD</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+  <widget source="session.CurrentService" render="Pixmap" pixmap="icons/ico_format_4kh.png" position="1600,828" size="50,35" zPosition="9" alphatest="blend">
+    <convert type="ServiceInfo">IsHDR10</convert>
+    <convert type="ConditionalShowHide" />
+  </widget>
+</screen>
+	</skin>
